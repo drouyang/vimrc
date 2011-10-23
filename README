@@ -2,12 +2,22 @@ Usage
 =====
 important
 ---------
-<esc> is unmaped in input mode, instead 'jk' comb. is used. Aimed to force your hand stay on central keyboard.
+<esc> is unmaped in input mode, instead 'jk' comb. is used. Aimed to force your hand stay on central keyboard. Also, <left>, <right>, <up>, <down> are unmapeed for the same reason. Please get used to it, to make yourself more efficient.
+
 
 fast configuration
 ------------------
 fast edit: ,e
 fast source .vimrc: auto after save
+
+source code format
+------------------
+google c++ guideline style used (vim/indent/cpp.vim)
+python indent (vim/indent/python.vim)
+
+more
+----
+there're lots more mapping, please refer to the .vimrc
 
 Install
 ===========
