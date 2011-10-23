@@ -1,3 +1,16 @@
+Usage
+=====
+important
+---------
+<esc> is unmaped in input mode, instead 'jk' comb. is used. Aimed to force your hand stay on central keyboard.
+
+fast configuration
+------------------
+fast edit: ,e
+fast source .vimrc: auto after save
+
+Install
+===========
 To activate the configuration files, use
 $bash install.sh
 
