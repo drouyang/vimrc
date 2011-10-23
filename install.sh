@@ -1,7 +1,3 @@
-To activate the configuration files, use
-$bash install.sh
-
-insall.sh:
 #!/bin/bash
 mv ~/.vimrc ~/.vimrc.bak
 mv ~/.vim ~/.vim.bak
