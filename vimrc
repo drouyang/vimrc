@@ -373,7 +373,7 @@ vnoremap <leader>c <esc>`>a<enter>*/<esc>`<i/*<enter><esc>
 
 
 " }}} end vmap
-" {{{ input mode
+" {{{ insert mode
 
 " Map auto complete of (, ", ', [
 inoremap (<tab> ()<esc>i
