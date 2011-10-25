@@ -35,6 +35,33 @@ nnoremap <leader>s :source $MYVIMRC<cr>
 " auto source vimrc after update
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+
+" {{{ {},(),<>,'',"",[], <tab> auto close and select - surround
+" Map auto complete of (, ", ', [
+inoremap (<tab> ()<esc>i
+inoremap )<tab> ()<esc>i
+inoremap {<tab> {<esc>o}<esc>O
+inoremap }<tab> {<esc>o}<esc>O
+inoremap [<tab> []<esc>i
+inoremap ]<tab> []<esc>i
+inoremap "<tab> ""<esc>i
+inoremap '<tab> ''<esc>i
+inoremap <<tab> <><esc>i
+inoremap ><tab> <><esc>i
+
+" selected surround with
+vnoremap <leader>) <esc>`>a)<esc>`<i(<esc>
+vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
+vnoremap <leader>{ <esc>`>a<enter>}<esc>`<i{<enter><esc>
+vnoremap <leader>} <esc>`>a<enter>}<esc>`<i{<enter><esc>
+vnoremap <leader>[ <esc>`>a]<esc>`<i[<esc>
+vnoremap <leader>] <esc>`>a]<esc>`<i[<esc>
+vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
+vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>
+vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
+vnoremap <leader>> <esc>`>a><esc>`<i<<esc>
+" }}}
+
 " {{{ Defualt Options
 set path+=~/etc/**,/usr/share/vim/vim72/**
 set nocompatible
@@ -87,33 +114,6 @@ set autoindent
 " }}}
 
 " }}}
-
-" {{{ {},(),<>,'',"",[], <tab> auto close and select - surround
-" Map auto complete of (, ", ', [
-inoremap (<tab> ()<esc>i
-inoremap )<tab> ()<esc>i
-inoremap {<tab> {<esc>o}<esc>O
-inoremap }<tab> {<esc>o}<esc>O
-inoremap [<tab> []<esc>i
-inoremap ]<tab> []<esc>i
-inoremap "<tab> ""<esc>i
-inoremap '<tab> ''<esc>i
-inoremap <<tab> <><esc>i
-inoremap ><tab> <><esc>i
-
-" selected surround with
-vnoremap <leader>) <esc>`>a)<esc>`<i(<esc>
-vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
-vnoremap <leader>{ <esc>`>a<enter>}<esc>`<i{<enter><esc>
-vnoremap <leader>} <esc>`>a<enter>}<esc>`<i{<enter><esc>
-vnoremap <leader>[ <esc>`>a]<esc>`<i[<esc>
-vnoremap <leader>] <esc>`>a]<esc>`<i[<esc>
-vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
-vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>
-vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
-vnoremap <leader>> <esc>`>a><esc>`<i<<esc>
-" }}}
-
 " vimrc Display Settings ---------------------- {{{
 augroup filetype_vim
     au!
