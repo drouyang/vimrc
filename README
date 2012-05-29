@@ -7,7 +7,7 @@ Usage
 =====
 important
 ---------
-<esc> is unmaped in input mode, instead 'jk' comb. is used. Aimed to force your hand stay on central keyboard.
+To enable fast exit form input mode to normal mode, 'jk' is mapped to <esx>. 
 Also, <left>, <right>, <up>, <down> are unmapeed for the same reason. 
 Please get used to it, to make yourself more efficient.
 
@@ -25,4 +25,5 @@ python indent (vim/indent/python.vim)
 plugins
 -------
 a.vim: switch between .c and .h by ':A' 
+taglist.vim: view tags in a window
 

@@ -8,7 +8,7 @@
 " Usage:
 
 " IMPORTANT: <ESC> is unmapped, use jk
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 inoremap jk <esc>
 
 " unmap up, down, left, right
