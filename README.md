@@ -26,4 +26,5 @@ plugins
 -------
 a.vim: switch between .c and .h by ':A' 
 taglist.vim: view tags in a window
+cscope_maps.vim: cscope mappings
 

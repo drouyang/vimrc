@@ -36,6 +36,12 @@ nnoremap <leader>s :source $MYVIMRC<cr>
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 
+" paste mode
+nnoremap <leader>p :set invpaste paste?<CR>
+set pastetoggle=<leader>p
+
+set nocscopeverbose  
+
 " {{{ {},(),<>,'',"",[], <tab> auto close and select - surround
 " Map auto complete of (, ", ', [
 inoremap (<tab> ()<esc>i
@@ -93,6 +99,7 @@ set whichwrap+=<,>,h,l
 
 " utilities
 set showmatch
+set showmode
 set matchtime=5
 set autoread
 set grepprg=grep\ -nH\ $*
