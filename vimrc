@@ -9,7 +9,7 @@
 
 " IMPORTANT: <ESC> is unmapped, use jk
 " inoremap <esc> <nop>
-inoremap jk <esc>
+noremap jk <esc>:w<cr>
 
 " unmap up, down, left, right
 inoremap  <Up>     <nop>
@@ -35,6 +35,8 @@ nnoremap <leader>s :source $MYVIMRC<cr>
 " auto source vimrc after update
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+" ,q - qa 
+nnoremap <leader>q :qa<cr>
 
 " paste mode
 nnoremap <leader>p :set invpaste paste?<CR>
