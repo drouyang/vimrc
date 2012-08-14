@@ -1,7 +1,6 @@
 "=====================================================================
-" The vimrc file created by Jallen
-" Last Change:   2010-03-31
-" Maintainer:   Jallen Ouyang <jallen.o.y@gmail.com>
+" The vimrc file created by Jiannan Ouyang
+" Maintainer:   Jiannan Ouyang <jiannan.ouyang@gmail.com>
 " License:      This file is placed in the public domain.
 "=====================================================================
 
@@ -11,15 +10,15 @@
 " inoremap <esc> <nop>
 noremap jk <esc>:w<cr>
 
-" unmap up, down, left, right
-inoremap  <Up>     <nop>
-inoremap  <Down>   <nop>
-inoremap  <Left>   <nop>
-inoremap  <Right>  <nop>
-noremap   <Up>     <nop>
-noremap   <Down>   <nop>
-noremap   <Left>   <nop>
-noremap   <Right>  <nop>
+" disable up, down, left, right
+"inoremap  <Up>     <nop>
+"inoremap  <Down>   <nop>
+"inoremap  <Left>   <nop>
+"inoremap  <Right>  <nop>
+"noremap   <Up>     <nop>
+"noremap   <Down>   <nop>
+"noremap   <Left>   <nop>
+"noremap   <Right>  <nop>
 
 " global and local leader
 let mapleader = ","
@@ -42,7 +41,15 @@ nnoremap <leader>q :qa<cr>
 nnoremap <leader>p :set invpaste paste?<CR>
 set pastetoggle=<leader>p
 
+" cscope
 set nocscopeverbose  
+
+" MiniBufExpl (MBE)
+map <leader>b :TMiniBufExplorer<cr>
+let g:miniBufExplorerMoreThanOne=1
+
+" TagList
+map <leader>t :TlistToggle<cr>
 
 " {{{ {},(),<>,'',"",[], <tab> auto close and select - surround
 " Map auto complete of (, ", ', [
