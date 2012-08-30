@@ -8,7 +8,8 @@
 
 " IMPORTANT: <ESC> is unmapped, use jk
 " inoremap <esc> <nop>
-noremap jk <esc>:w<cr>
+inoremap jk <esc>:w<cr>
+"noremap jk <esc>:w<cr>
 
 " disable up, down, left, right
 "inoremap  <Up>     <nop>
@@ -88,7 +89,7 @@ set fileencodings=utf-8,gbk
 "set number
 set laststatus=1
 let s:sidewidth=35
-"``colorscheme freya
+colorscheme desert256
 
 " No sound on errors
 set noerrorbells
