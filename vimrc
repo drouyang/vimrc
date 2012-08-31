@@ -9,7 +9,6 @@
 " IMPORTANT: <ESC> is unmapped, use jk
 " inoremap <esc> <nop>
 inoremap jk <esc>:w<cr>
-"noremap jk <esc>:w<cr>
 
 " disable up, down, left, right
 "inoremap  <Up>     <nop>
@@ -38,6 +37,18 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 " ,q - qa 
 nnoremap <leader>q :qa<cr>
 
+" ,<N> - buffer
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+nnoremap <Leader>8 :8b<CR>
+nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>0 :10b<CR>
+
 " paste mode
 nnoremap <leader>p :set invpaste paste?<CR>
 set pastetoggle=<leader>p
@@ -47,7 +58,7 @@ set nocscopeverbose
 
 " MiniBufExpl (MBE)
 map <leader>b :TMiniBufExplorer<cr>
-let g:miniBufExplorerMoreThanOne=1
+" let g:miniBufExplorerMoreThanOne=1
 
 " TagList
 map <leader>t :TlistToggle<cr>
@@ -89,8 +100,11 @@ set fileencodings=utf-8,gbk
 "set number
 set laststatus=1
 let s:sidewidth=35
-colorscheme desert256
-
+if !has('gui_running')
+    colorscheme desert256
+else
+    colorscheme desert
+endif
 " No sound on errors
 set noerrorbells
 set novisualbell
