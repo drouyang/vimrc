@@ -1,5 +1,11 @@
 #!/bin/bash
-mv ~/.vimrc ~/.vimrc.bak
-mv ~/.vim ~/.vim.bak
-ln -s `pwd`/vimrc ~/.vimrc 
-ln -s `pwd`/vim ~/.vim
+mv -f ~/.vim ~/.vim.bak
+cp -r vim ~/.vim
+
+mv -f ~/.vimrc ~/.vimrc.bak
+cp vimrc ~/.vimrc
+
+
+mv -f ~/.vimrc.local ~/.vimrc.local.bak
+cp vimrc.local ~/.vimrc.local
+
