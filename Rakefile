@@ -138,7 +138,7 @@ task :default do
 
   step 'solarized dark or light'
   puts
-  puts " You're almost done! Inside of the maximum-awesome-linux directory, do: "
+  puts " Tune terminal color: if run with gnome-termial, do: "
   puts "   rake install:solarized['dark'] "
   puts "     or                           "
   puts "   rake install:solarized['light']"
