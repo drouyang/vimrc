@@ -1,0 +1,114 @@
+"=====================================================================
+" The vimrc file created by Jiannan Ouyang
+" Maintainer:   Jiannan Ouyang <jiannan.ouyang@gmail.com>
+" License:      This file is placed in the public domain.
+"=====================================================================
+
+" jk = <esc>
+inoremap jk <esc>:w<cr>
+
+" gui settings
+if (&t_Co == 256 || has('gui_running'))
+    set background=dark
+    colorscheme desert256
+else
+    set background=dark
+    colorscheme desert256
+endif
+
+" global and local leader
+let mapleader = ","
+let mapplocalleader = "\\"
+
+" Fast vimrc Edition
+" ,e - edit vimrc
+nnoremap <leader>e :e $MYVIMRC<cr>
+" ,ev - edit vimrc in vertical split window
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+" ,s - source vimrc
+nnoremap <leader>s :source $MYVIMRC<cr>
+" auto source vimrc after update
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" ,q - qa 
+nnoremap <leader>q :qa<cr>
+
+" ,c spell check 
+nnoremap <leader>c :set spell!<cr>
+
+" ,n number 
+nnoremap <leader>n :set number!<cr>
+
+" ,<N> - buffer
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+nnoremap <Leader>8 :8b<CR>
+nnoremap <Leader>9 :9b<CR>
+nnoremap <Leader>0 :10b<CR>
+
+" paste mode
+nnoremap <leader>p :set invpaste paste?<CR>
+set pastetoggle=<leader>p
+
+" cscope
+set nocscopeverbose  
+
+" MiniBufExpl (MBE)
+map <leader>b :TMiniBufExplorer<cr>
+" let g:miniBufExplorerMoreThanOne=1
+
+" TagList
+map <leader>t :TlistToggle<cr>
+
+
+" {{{ Defualt Options
+set path+=~/etc/**,/usr/share/vim/vim72/**
+set encoding=utf-8
+let &termencoding=&encoding
+set fileencodings=utf-8,gbk
+
+"set guioptions=
+"set number
+set laststatus=1
+let s:sidewidth=35
+" No sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+
+set history=300
+set nobackup
+set noswapfile
+set hidden
+
+" Set backspace config
+set whichwrap+=<,>,h,l
+
+" utilities
+set showmatch
+set showmode
+set matchtime=5
+set autoread
+set grepprg=grep\ -nH\ $*
+
+" Search and tags
+set ignorecase
+set smartcase
+set laststatus=1
+set hlsearch
+set incsearch
+set magic
+
+" }}}
+
+" vimrc Display Settings ---------------------- {{{
+augroup filetype_vim
+    au!
+    au FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
