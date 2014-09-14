@@ -131,6 +131,12 @@ task :default do
   link_file 'vim'               , '~/.vim'
   link_file 'vimrc'             , '~/.vimrc'
   link_file 'vimrc.bundles'     , '~/.vimrc.bundles'
+  link_file 'bashrc.local'      , '~/.bashrc.local'
+
+  sh 'echo "if [ -f ~/.bashrc.local ]; then" >> ~/.bashrc'
+  sh 'echo "    . ~/.bashrc.local" >> ~/.bashrc'
+  sh 'echo "fi" >> ~/.bashrc'
+
   unless File.exist?(File.expand_path('~/.vimrc.local'))
     cp File.expand_path('vimrc.local'), File.expand_path('~/.vimrc.local'), :verbose => true
   end
