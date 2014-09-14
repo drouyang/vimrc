@@ -75,6 +75,12 @@ namespace :install do
     sh 'sudo apt-get install ctags'
   end
 
+  desc 'Install cscope'
+  task :cscope do
+    step 'cscope'
+    sh 'sudo apt-get install cscope'
+  end
+
   # https://github.com/ggreer/the_silver_searcher
   desc 'Install The Silver Searcher'
   task :the_silver_searcher do
@@ -87,29 +93,29 @@ namespace :install do
     end
   end
 
-  # instructions from http://www.webupd8.org/2011/04/solarized-must-have-color-paletter-for.html
-  desc 'Install Solarized and fix ls'
-  task :solarized, :arg1 do |t, args|
-    args[:arg1] = "dark" unless ["dark", "light"].include? args[:arg1]
-    color = ["dark", "light"].include?(args[:arg1]) ? args[:arg1] : "dark"
-
-    step 'solarized'
-    sh 'git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git' unless File.exist? 'gnome-terminal-colors-solarized'
-    Dir.chdir 'gnome-terminal-colors-solarized' do
-      sh "./solarize #{color}"
-    end
-
-    step 'fix ls-colors'
-    Dir.chdir do
-      sh "wget --no-check-certificate https://raw.github.com/seebi/dircolors-solarized/master/dircolors.ansi-#{color}"
-      sh "mv dircolors.ansi-#{color} .dircolors"
-      sh 'eval `dircolors .dircolors`'
-    end
-  end
+#  # instructions from http://www.webupd8.org/2011/04/solarized-must-have-color-paletter-for.html
+#  desc 'Install Solarized and fix ls'
+#  task :solarized, :arg1 do |t, args|
+#    args[:arg1] = "dark" unless ["dark", "light"].include? args[:arg1]
+#    color = ["dark", "light"].include?(args[:arg1]) ? args[:arg1] : "dark"
+#
+#    step 'solarized'
+#    sh 'git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git' unless File.exist? 'gnome-terminal-colors-solarized'
+#    Dir.chdir 'gnome-terminal-colors-solarized' do
+#      sh "./solarize #{color}"
+#    end
+#
+#    step 'fix ls-colors'
+#    Dir.chdir do
+#      sh "wget --no-check-certificate https://raw.github.com/seebi/dircolors-solarized/master/dircolors.ansi-#{color}"
+#      sh "mv dircolors.ansi-#{color} .dircolors"
+#      sh 'eval `dircolors .dircolors`'
+#    end
+#  end
 
   desc 'Install Vundle'
   task :vundle do
-    step 'vundle'
+    step 'install vundle'
     install_github_bundle 'gmarik','vundle'
     sh 'vim -c "BundleInstall" -c "q" -c "q"'
   end
@@ -120,7 +126,7 @@ task :default do
   #step 'git submodules'
   #sh 'git submodule update --init'
 
-  step 'symlink'
+  step 'setup symlink'
   link_file 'tmux.conf'         , '~/.tmux.conf'
   link_file 'vim'               , '~/.vim'
   link_file 'vimrc'             , '~/.vimrc'
@@ -135,13 +141,8 @@ task :default do
 
   # Install Vundle and bundles
   Rake::Task['install:vundle'].invoke
+  Rake::Task['install:tmux'].invoke
+  Rake::Task['install:cscope'].invoke
+  Rake::Task['install:ctags'].invoke
 
-  step 'solarized dark or light'
-  puts
-  puts " Tune terminal color: if run with gnome-termial, do: "
-  puts "   rake install:solarized['dark'] "
-  puts "     or                           "
-  puts "   rake install:solarized['light']"
-
-  puts " You may need to close your terminal and re-open it for it to take effect."
 end
