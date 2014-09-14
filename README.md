@@ -1,17 +1,17 @@
 Install
 ===========
-1. Install Rake
-* Ubuntu/Debian
+* Install Rake
+Ubuntu/Debian
 ```
-sudo apt-get install rake
+$sudo apt-get install rake
 ```
-* Redhat/Fedora/Centos
+Redhat/Fedora/Centos
 ```
-sudo yum install rake
+$sudo yum install rake
 ```
-2. Install my_vimrc
+* Install my_vimrc
 ```
-rake
+$rake
 ```
 
 Usage
