@@ -1,5 +1,5 @@
 # Install
-* Install Rake
+1. Install Rake
 
 Ubuntu/Debian
 ```
@@ -11,7 +11,7 @@ Redhat/Fedora/Centos
 $sudo yum install rake
 ```
 
-* Install my_vimrc
+2. Install my_vimrc
 ```
 $rake
 ```
