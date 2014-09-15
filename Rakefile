@@ -50,69 +50,6 @@ def install_github_bundle(user, package)
 end
 
 namespace :install do
-
-  desc 'Apt-get Update'
-  task :update do
-    step 'apt-get update'
-    sh 'sudo apt-get update'
-  end
-
-  desc 'Install Vim'
-  task :vim do
-    step 'vim'
-    sh 'sudo apt-get install vim'
-  end
-
-  desc 'Install tmux'
-  task :tmux do
-    step 'tmux'
-    sh 'sudo apt-get install tmux'
-  end
-
-  desc 'Install ctags'
-  task :ctags do
-    step 'ctags'
-    sh 'sudo apt-get install ctags'
-  end
-
-  desc 'Install cscope'
-  task :cscope do
-    step 'cscope'
-    sh 'sudo apt-get install cscope'
-  end
-
-  # https://github.com/ggreer/the_silver_searcher
-  desc 'Install The Silver Searcher'
-  task :the_silver_searcher do
-    step 'the_silver_searcher'
-    sh 'sudo apt-get install build-essential automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev'
-    sh 'git clone https://github.com/ggreer/the_silver_searcher.git'
-    Dir.chdir 'the_silver_searcher' do
-      sh './build.sh'
-      sh 'sudo make install'
-    end
-  end
-
-#  # instructions from http://www.webupd8.org/2011/04/solarized-must-have-color-paletter-for.html
-#  desc 'Install Solarized and fix ls'
-#  task :solarized, :arg1 do |t, args|
-#    args[:arg1] = "dark" unless ["dark", "light"].include? args[:arg1]
-#    color = ["dark", "light"].include?(args[:arg1]) ? args[:arg1] : "dark"
-#
-#    step 'solarized'
-#    sh 'git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git' unless File.exist? 'gnome-terminal-colors-solarized'
-#    Dir.chdir 'gnome-terminal-colors-solarized' do
-#      sh "./solarize #{color}"
-#    end
-#
-#    step 'fix ls-colors'
-#    Dir.chdir do
-#      sh "wget --no-check-certificate https://raw.github.com/seebi/dircolors-solarized/master/dircolors.ansi-#{color}"
-#      sh "mv dircolors.ansi-#{color} .dircolors"
-#      sh 'eval `dircolors .dircolors`'
-#    end
-#  end
-
   desc 'Install Vundle'
   task :vundle do
     step 'install vundle'
@@ -146,8 +83,4 @@ task :default do
 
   # Install Vundle and bundles
   Rake::Task['install:vundle'].invoke
-  Rake::Task['install:tmux'].invoke
-  Rake::Task['install:cscope'].invoke
-  Rake::Task['install:ctags'].invoke
-
 end
