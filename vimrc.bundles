@@ -1,40 +1,85 @@
-" Bundles here are part of the core Maximum Awesome setup
+" Bundles here are part of the CORE Maximum Awesome setup
 " Do NOT add bundles to this list, as they might get removed when you upgrade
 " Maximum Awesome.
-" Please create ~/.vim.bundles.local and add any extra bundles you want there
-Bundle 'airblade/vim-gitgutter'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'austintaylor/vim-indentobject'
-Bundle 'christoomey/vim-tmux-navigator'
+" Please create ~/.vimrc.bundles.local and add any extra bundles you want there
+
+" vundle vim package manager
 Bundle 'gmarik/vundle'
-Bundle 'juvenn/mustache.vim'
-Bundle 'kchmck/vim-coffee-script'
+
+" diff in vim
+" Bundle 'airblade/vim-gitgutter'
+
+" defined indent level based text object
+Bundle 'austintaylor/vim-indentobject'
+
+" tmux with vim
+Bundle 'christoomey/vim-tmux-navigator'
+
+" finder for vim
 Bundle 'kien/ctrlp.vim'
-Bundle 'leafgarland/typescript-vim'
+
 Bundle 'majutsushi/tagbar'
-Bundle 'rking/ag.vim'
-Bundle 'msanders/snipmate.vim'
+
+" silver searcher for code search
+" Bundle 'rking/ag.vim'
+
+" textual snippets, code block auto-completion, with dependencies
+Bundle 'garbas/vim-snipmate'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+
+" indent visualization
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'nono/vim-handlebars'
-Bundle 'pangloss/vim-javascript'
-Bundle 'wookiehangover/jshint.vim'
+
+" view files and directories
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-bundler'
+
+" syntastic checking, too slow
+" Bundle 'scrooloose/syntastic'
+
 Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
+
+" git wrapper
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-pastie'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-rails'
+
+
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'eventualbuddha/vim-protobuf'
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/Align'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/matchit.zip'
+
+Bundle 'pangloss/vim-javascript'
+Bundle 'eventualbuddha/vim-protobuf'
+Bundle 'vim-ruby/vim-ruby'
+
+" Ruby bundler
+" Bundle 'tpope/vim-bundler'
+" Bundle 'tpope/vim-cucumber'
+" Bundle 'tpope/vim-endwise'
+
+" online paste, WT*?
+" Bundle 'tpope/vim-pastie'
+
+" Ruby on rails
+" add tags
+" Bundle 'tpope/vim-ragtag'
+" Bundle 'tpope/vim-rails'
+
+" text template, not needed
+" Bundle 'juvenn/mustache.vim'
+" Bundle 'nono/vim-handlebars'
+" Bundle 'slim-template/vim-slim'
+
+" javascript encapsulation
+" Bundle 'kchmck/vim-coffee-script'
+" Bundle 'leafgarland/typescript-vim'
+
+" javascript error detection
+" Bundle 'wookiehangover/jshint.vim'
+
+" color, does not work out of the box for termial
+"Bundle 'altercation/vim-colors-solarized'
+"Bundle 'tpope/vim-vividchalk'
+
