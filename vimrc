@@ -107,5 +107,5 @@ if filereadable(expand("~/.vimrc.local"))
   "
   " autocmd! bufwritepost .vimrc source ~/.vimrc
   " noremap! jj <ESC>
-  " source ~/.vimrc.local
+  source ~/.vimrc.local
 endif
