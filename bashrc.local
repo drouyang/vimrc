@@ -2,6 +2,9 @@
 alias gl='git log --pretty=format:"%Cred%h%Creset - %s" --abbrev-commit -10'
 alias gs='git status'
 alias gm='git commit -am'
+alias gph='git push'
+alias gpl='git pull'
+
 function cd {
   builtin cd "$@" && ls -F
 }
