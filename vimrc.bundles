@@ -6,6 +6,9 @@
 " vundle vim package manager
 Bundle 'gmarik/vundle'
 
+" fancy start window
+Bundle 'mhinz/vim-startify'
+
 " diff in vim
 " Bundle 'airblade/vim-gitgutter'
 
@@ -13,7 +16,8 @@ Bundle 'gmarik/vundle'
 Bundle 'austintaylor/vim-indentobject'
 
 " auto vim session
-Bundle 'wting/gitsessions.vim'
+" Bundle 'wting/gitsessions.vim'
+Bundle "tpope/vim-obsession"
 
 " tmux with vim
 Bundle 'christoomey/vim-tmux-navigator'
