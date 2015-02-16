@@ -35,6 +35,8 @@ nnoremap <leader>q :qa<cr>
 
 " ,c spell check 
 nnoremap <leader>c :set spell!<cr>
+hi clear SpellBad
+hi SpellBad cterm=underline
 
 " ,n number 
 nnoremap <leader>n :set number!<cr>
@@ -50,6 +52,9 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
+
+" vim session init
+nnoremap <leader>gss :GitSessionSave<cr>
 
 " paste mode
 nnoremap <leader>p :set invpaste paste?<CR>

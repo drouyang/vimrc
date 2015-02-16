@@ -12,6 +12,9 @@ Bundle 'gmarik/vundle'
 " defined indent level based text object
 Bundle 'austintaylor/vim-indentobject'
 
+" auto vim session
+Bundle 'wting/gitsessions.vim'
+
 " tmux with vim
 Bundle 'christoomey/vim-tmux-navigator'
 
