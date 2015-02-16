@@ -55,6 +55,7 @@ task :default do
   link_file 'vimrc'             , '~/.vimrc'
   link_file 'vimrc.local'       , '~/.vimrc.local'
   link_file 'vimrc.bundles'     , '~/.vimrc.bundles'
+  link_file 'bashrc.local'     , '~/.bashrc.local'
 
   unless File.exist?(File.expand_path('~/.vimrc.local'))
     cp File.expand_path('vimrc.local'), File.expand_path('~/.vimrc.local'), :verbose => true
