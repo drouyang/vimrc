@@ -16,6 +16,9 @@ def link_file(original_filename, symlink_filename)
       return if symlink_points_to_path == original_path
       # Symlinks can't just be moved like regular files. Recreate old one, and
       # remove it.
+      if File.exists?(backup_path) || File.symlink?(backup_path)
+        rm backup_path
+      end
       ln_s symlink_points_to_path, backup_path, :verbose => true
       rm symlink_path
     else
@@ -50,6 +53,7 @@ task :default do
   link_file 'tmux.conf'         , '~/.tmux.conf'
   link_file 'vim'               , '~/.vim'
   link_file 'vimrc'             , '~/.vimrc'
+  link_file 'vimrc.local'       , '~/.vimrc.local'
   link_file 'vimrc.bundles'     , '~/.vimrc.bundles'
 
   unless File.exist?(File.expand_path('~/.vimrc.local'))
