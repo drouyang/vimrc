@@ -16,6 +16,9 @@ $sudo yum install rake
 $rake
 ```
 
+##Install bashmarks
+checkout README under bashmarks/
+
 Usage
 =====
 fast vimrc edition
@@ -33,4 +36,3 @@ plugins
 * a.vim: switch between .c and .h by ':A' 
 * taglist.vim: view tags in a window
 * cscope_maps.vim: cscope mappings
-
