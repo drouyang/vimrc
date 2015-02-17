@@ -22,13 +22,10 @@ let mapplocalleader = "\\"
 
 " Fast vimrc Edition
 " ,e - edit vimrc
-nnoremap <leader>e :e $MYVIMRC<cr>
-" ,ev - edit vimrc in vertical split window
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-" ,s - source vimrc
-nnoremap <leader>s :source $MYVIMRC<cr>
+nnoremap <leader>e :sp ~/.vimrc.local<cr>
 " auto source vimrc after update
-autocmd! bufwritepost .vimrc source ~/.vimrc
+" autocmd! bufwritepossour .vimrc source ~/.vimrc
+nnoremap <leader>s :source ~/.vimrc.local<cr>
 
 " ,q - qa 
 nnoremap <leader>q :qa<cr>
@@ -64,11 +61,14 @@ set pastetoggle=<leader>p
 set nocscopeverbose  
 
 " MiniBufExpl (MBE)
-map <leader>b :TMiniBufExplorer<cr>
+" map <leader>b :TMiniBufExplorer<cr>
 " let g:miniBufExplorerMoreThanOne=1
 
 " TagList
-map <leader>t :TlistToggle<cr>
+" map <leader>t :TlistToggle<cr>
+
+" vimux
+map <leader>tm :call VimuxRunCommand("make")<CR>
 
 
 " {{{ Defualt Options
@@ -79,7 +79,7 @@ set fileencodings=utf-8,gbk
 
 "set guioptions=
 "set number
-set laststatus=1
+set laststatus=0
 let s:sidewidth=35
 " No sound on errors
 set noerrorbells
@@ -104,7 +104,7 @@ set grepprg=grep\ -nH\ $*
 " Search and tags
 set ignorecase
 set smartcase
-set laststatus=1
+"set laststatus=1
 set hlsearch
 set incsearch
 set magic
