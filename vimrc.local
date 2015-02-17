@@ -68,8 +68,18 @@ set nocscopeverbose
 " map <leader>t :TlistToggle<cr>
 
 " vimux
+" run
+map <leader>tr :call VimuxPromptCommand()<CR>
+" rerun
+map <leader>t. :call VimuxRunLastCommand()<CR>
+" inspect
+map <leader>ti :call VimuxInspectRunner()<CR>
+" close
+map <leader>tc :call VimuxCloseRunner()<CR>
+" shortcut
 map <leader>tm :call VimuxRunCommand("make")<CR>
 
+map <f6> :call VimuxRunCommand("make")<CR>
 
 " {{{ Defualt Options
 set path+=~/etc/**,/usr/share/vim/vim72/**

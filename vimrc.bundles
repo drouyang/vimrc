@@ -23,8 +23,8 @@ Bundle 'austintaylor/vim-indentobject'
 Bundle "tpope/vim-obsession"
 
 " tmux with vim
-" Bundle 'christoomey/vim-tmux-navigator'
-" Bundle 'benmills/vimux'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'benmills/vimux'
 
 " finder for vim
 Bundle 'kien/ctrlp.vim'
