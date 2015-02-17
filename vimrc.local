@@ -10,10 +10,10 @@ inoremap jk <esc>:w<cr>
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
     set background=dark
-    colorscheme desert256
+    colorscheme solarized
 else
     set background=dark
-    colorscheme desert256
+    colorscheme solarized
 endif
 
 " global and local leader

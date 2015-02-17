@@ -1,3 +1,7 @@
+if [ -f ~/.bashrc ]; then
+  source ~/.local/bin/bashmarks.sh
+fi
+
 #alias gl='git log --pretty=format:"%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit -10'
 alias gl='git log --pretty=format:"%Cred%h%Creset - %s" --abbrev-commit -10'
 alias gs='git status'

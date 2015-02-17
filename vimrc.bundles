@@ -6,6 +6,9 @@
 " vundle vim package manager
 Bundle 'gmarik/vundle'
 
+" color
+Bundle 'altercation/vim-colors-solarized'
+
 " fancy start window
 Bundle 'mhinz/vim-startify'
 
@@ -88,6 +91,5 @@ Bundle 'vim-ruby/vim-ruby'
 " Bundle 'wookiehangover/jshint.vim'
 
 " color, does not work out of the box for termial
-"Bundle 'altercation/vim-colors-solarized'
 "Bundle 'tpope/vim-vividchalk'
 
