@@ -1,4 +1,4 @@
-if [ -f ~/.bashrc ]; then
+if [ -f ~/.local/bin/bashmarks.sh ]; then
   source ~/.local/bin/bashmarks.sh
 fi
 
